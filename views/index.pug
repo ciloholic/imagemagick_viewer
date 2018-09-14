@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  main
+    section.input
+      form
+        input(type='file', accept='image/jpeg,image/png')
+    section.cmd
+      form
+        input(type='text', placeholder='-resize 150x150!')
+    section.preview
+    section.convert
+      img

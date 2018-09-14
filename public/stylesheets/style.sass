@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP')
+
+=image-style
+  img
+    background-color: #888
+    width: 100%
+    height: 100%
+    object-fit: contain
+
+*
+  list-style: none
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html,
+body
+  height: 100vh
+
+body
+  font-family: 'Noto Serif JP', sans-serif
+
+main
+  padding: 30px
+  display: grid
+  grid-template-rows: 30px 500px
+  grid-template-columns: 1fr 1fr
+  grid-template-areas: 'input cmd' 'preview convert'
+  grid-gap: 0 30px
+  .input
+    grid-area: input
+    text-align: center
+  .cmd
+    input
+      width: 100%
+      height: 100%
+      padding: 5px
+      border: 1px solid #888
+      border-radius: 4px
+  .preview
+    grid-area: preview
+    background-color: #ddd
+    input
+      margin: 10px
+    +image-style()
+  .convert
+    grid-area: convert
+    +image-style()
